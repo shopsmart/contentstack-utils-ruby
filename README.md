@@ -1,1 +1,1 @@
-# contentstack-utils-ruby
+# contentstack Utils Ruby

@@ -1,0 +1,10 @@
+contentstack-*
+build_doc.sh
+test
+doc
+spec-integration
+coverage
+\.yardoc
+.DS_Store
+.bundle/
+*/rspec_results.html

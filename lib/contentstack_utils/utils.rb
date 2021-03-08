@@ -1,6 +1,7 @@
 require_relative './model/options.rb'
 require_relative './model/metadata.rb'
 require_relative './support/helper.rb'
+require 'nokogiri'
 
 module ContentstackUtils
     def self.render_content(content, options)
@@ -47,16 +48,6 @@ module ContentstackUtils
                     return object 
                 end
             end
-        # elsif entry.has_key? 'embeddedItems'
-        #     if entry['embeddedItems'].has_key? 'edges'
-        #         if entry['embeddedItems']['edges'].has_key? 'node'
-        #             node = entry['embeddedItems']['edges']['node']
-        #             object = node.select { |embedObject| embedObject['uid'] == metadata.item_uid }
-        #             if object != nil && object.length() > 0 
-        #                 return object 
-        #              end
-        #         end
-        #     end
         end
         return nil
     end

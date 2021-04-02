@@ -31,10 +31,10 @@ class  CustomLOption < ContentstackUtils::Model::Option
 			when  'block'  
 				if metadataArray.content_type_uid === 'product'  
 					return  "<div>  
-							<h2 >#{embeddedObject["title"]}</h2>  
-							<img src=#{embeddedObject["product_image"]["url"]} alt=#{embeddedObject["product_image"]["title"]}/>  
-							<p>#{embeddedObject["price"]}</p>  
-							</div>"  
+                        <h2 >#{embeddedObject["title"]}</h2>  
+                        <img src=#{embeddedObject["product_image"]["url"]} alt=#{embeddedObject["product_image"]["title"]}/>  
+                        <p>#{embeddedObject["price"]}</p>  
+                        </div>"  
 				end  
 			when  'inline'  
 				return  "<span><b>#{embeddedObject["title"]}</b> - #{embeddedObject["description"]}</span>"  

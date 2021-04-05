@@ -21,12 +21,12 @@ Gem::Specification.new do |s|
   s.test_files    = s.files.grep(%r{^spec/})
   s.require_paths = ["lib"]
 
-  s.add_dependency 'activesupport'
-  s.add_dependency 'nokogiri'
+  s.add_dependency 'activesupport', '~> 6.1.0'
+  s.add_dependency 'nokogiri', '~> 1.11.0'
 
-  s.add_development_dependency 'rake'
-  s.add_development_dependency 'rspec'
-  s.add_development_dependency 'webmock'
-  s.add_development_dependency 'simplecov'
-  s.add_development_dependency 'yard'
+  s.add_development_dependency 'rake', '~> 13.0.3'
+  s.add_development_dependency 'rspec', '~> 3.10.0'
+  s.add_development_dependency 'webmock', '~> 3.11.0'
+  s.add_development_dependency 'simplecov', '~> 0.21.1'
+  s.add_development_dependency 'yard', '~> 0.9.26'
 end

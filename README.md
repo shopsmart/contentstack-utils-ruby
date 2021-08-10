@@ -86,3 +86,12 @@ require  'contentstack'
 	Contentstack.render_content(@entry.rte_field_uid, ContentstackUtils::Model::Option.new(@entry))  
 end
 ```
+### GQL Json RTE to HTML
+To parse JSON RTE content from GQL response to HTML content use `ContentstackUtils::GQL.json_to_html` function as below:
+
+```ruby
+require  'contentstack_utils'  
+
+	result = ContentstackUtils::GQL.json_to_html(entry['single_rte'], ContentstackUtils::Model::Options.new())
+
+```

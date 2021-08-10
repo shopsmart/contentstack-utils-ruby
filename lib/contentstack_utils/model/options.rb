@@ -17,7 +17,7 @@ module ContentstackUtils
                 renderString = ''
                 case metadata.style_type
                 when 'block'
-                    renderString = "<div><p>#{embeddedObject['title'] || embeddedObject['uid']}</p><p>Content type: <span>#{embeddedObject['_content_type_uid']}</span></p></div>"
+                    renderString = "<div><p>#{embeddedObject['title'] || embeddedObject['uid']}</p><p>Content type: <span>#{embeddedObject['_content_type_uid'] || embeddedObject['system']['content_type_uid']}</span></p></div>"
                 when 'inline'
                     renderString = "<span>#{embeddedObject["title"] || embeddedObject["uid"]}</span>";
                 when 'link'

@@ -60,11 +60,11 @@ module ContentstackUtils
                 when 'p'
                     renderString = "<p>#{inner_html}</p>"
                 when 'a'
-                    renderString = "<a href='#{node["attrs"]["href"] || ""}'>#{inner_html}</a>"
+                    renderString = "<a href='#{node["attrs"]["href"] || node["attrs"]["url"] || ""}'>#{inner_html}</a>"
                 when 'img'
-                    renderString = "<img src='#{node["attrs"]["src"] || ""}' />#{inner_html}"
+                    renderString = "<img src='#{node["attrs"]["src"] || node["attrs"]["url"]  || ""}' />#{inner_html}"
                 when 'embed'
-                    renderString = "<iframe src='#{node["attrs"]["src"] || ""}'></iframe>"
+                    renderString = "<iframe src='#{node["attrs"]["src"] || node["attrs"]["url"]  || ""}'></iframe>"
                 when 'h1'
                     renderString = "<h1>#{inner_html}</h1>"
                 when 'h2'

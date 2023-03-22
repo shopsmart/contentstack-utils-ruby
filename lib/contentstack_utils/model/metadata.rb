@@ -18,12 +18,12 @@ module ContentstackUtils
                     @contentTypeUid = element["attrs"]['content-type-uid']
                     if element["children"] && element["children"].length() > 0
                         child = element["children"]
-
-                        @text = child.reduce([]) do |texts, item|
-                            texts << item["text"] if item["type"].nil? && item["text"]
-
-                            texts
-                        end.join
+                        @text = ""
+                        for item in child do
+                            if item["type"] == nil && item["text"]
+                                @text += item["text"]
+                            end
+                        end
                     end
                     @element = element
                     @attributes = element["attrs"]

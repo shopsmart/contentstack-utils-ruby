@@ -18,6 +18,7 @@ EmbedHtml = "<iframe src='https://www.youtube.com/watch?v=AOP0yARiW8U'></iframe>
 AssetReferenceHtml = "<img src='/v3/dummy.pdf' alt='dummy.pdf' />"
 EntryReferenceBlockHtml = "<div><p>Update this title</p><p>Content type: <span>content_block</span></p></div>"
 EntryReferenceLinkHtml = "<a href='/copy-of-entry-final-02'>/copy-of-entry-final-02</a>"
+# EntryReferenceLinkText = "<a href='/contentstack'>L'Oreal Paris Telescopic Lift Washable Mascara</a>"
 EntryReferenceInlineHtml = "<span>updated title</span>"
 
 BlankDocument = '{ "uid":"06e34a7a4e5d7fc2acd", "_version":13, "attrs":{ }, "children":[],"type":"doc"}'
@@ -41,6 +42,7 @@ EmbedJson = '{ "uid":"06e34a7190849d7f2acd", "_version":13, "attrs":{ }, "childr
 AssetReferenceJson = '{"uid":"06e34a7  5e4 e549d ", "_version":1, "attrs":{}, "children":[{  "uid": "4f7e33 3390a955 de10c1 c836", "type":"reference","attrs":{"display-type":"display","asset-uid":"asset_uid_1","content-type-uid":"sys_assets","asset-link":"https://images.contentstack.com/v3/11.jpg","asset-name":"11.jpg","asset-type":"image/jpeg","type":"asset","class-name":"embedded-asset","width":25.16914749661705,"className":"dsd","id":"sdf"},"children":[{"text":""}]}],"type":"doc"}'
 EntryReferenceBlockJson = '{ "uid":"06e34a7  5e4 e549d ", "_version":1, "attrs":{ }, "children":[{"uid":"70f9b 325075d43 128c0d0 aa3eb7f291f","type":"reference","attrs":{"display-type":"block","entry-uid":"entry_uid_1","content-type-uid":"content_block","locale":"en-us","type":"entry","class-name":"embedded-entry"},"children":[{"text":""}]}],"type":"doc"}'
 EntryReferenceLinkJson = '{ "uid":"06e34a7  5e4 e549d", "_version":1, "attrs":{ }, "children":[{"uid":"7626ea98e0e95d602210","type":"reference","attrs":{"target":"_self","href":"/copy-of-entry-final-02","display-type":"link","entry-uid":"entry_uid_2","content-type-uid":"embeddedrte","locale":"en-us","type":"entry","class-name":"embedded-entry"},"children":[{"text":"/copy-of-entry-final-02"}]}],"type":"doc"}'
+EntryReferenceLinkTextJson = '{ "uid":"06e34a7  5e4 e549d", "_version":1, "attrs":{ }, "children":[{"uid":"7626ea98e0e95d602210","type":"reference","attrs":{"target":"_self","href":"/copy-of-entry-final-02","display-type":"link","entry-uid":"entry_uid_3","content-type-uid":"embeddedrte","locale":"en-us","type":"entry","class-name":"embedded-entry"},"children":[{"text":"L\'Oreal Paris Telescopic Lift "},{"text":"Washable","italic":true},{"text":" Mascara"}]}],"type":"doc"}'
 EntryReferenceInlineJson = '{ "uid":"06e34a7  5e4 e549d", "_version":1, "attrs":{ }, "children":[{"uid":"506 4878f3f46 s21f0cbc aff","type":"reference","attrs":{"display-type":"inline","entry-uid":"entry_uid_3","content-type-uid":"embeddedrte","locale":"en-us","type":"entry","class-name":"embedded-entry"},"children":[{"text":""}]}],"type":"doc"}'
 HRJson = '{ "uid":"06e34a7  5e4 e549d", "_version":1, "attrs":{ }, "children":[{"uid":"f5a7b57 40a8a5c3 576828276b","type":"hr","children":[{"text":""}],"attrs":{ }}],"type":"doc"}'
 H1NonChildJson = '{ "uid":"06e34a7a449d7fc2acd","_version":13,"attrs":{ },"children":[{ "type":"h1","attrs":{ },"uid":"c2dfed70 4d7030c65e2e1"}],"type":"doc"}'

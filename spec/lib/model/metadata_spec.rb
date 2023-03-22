@@ -52,7 +52,7 @@ RSpec.describe ContentstackUtils::Model::Metadata do
             end
         end
 
-        it 'Asset Json To metadata' do 
+        it 'Asset Json To metadata' do
             doc = getJson(AssetReferenceJson)
             metadata = ContentstackUtils::Model::Metadata.new(doc["children"][0])
             expect(metadata.item_type).to eq "asset"
@@ -62,7 +62,7 @@ RSpec.describe ContentstackUtils::Model::Metadata do
             expect(metadata.text).to eq ''
         end
 
-        it 'Entry Block Json To metadata' do 
+        it 'Entry Block Json To metadata' do
             doc = getJson(EntryReferenceBlockJson)
             metadata = ContentstackUtils::Model::Metadata.new(doc["children"][0])
             expect(metadata.item_type).to eq "entry"
@@ -72,7 +72,7 @@ RSpec.describe ContentstackUtils::Model::Metadata do
             expect(metadata.text).to eq ''
         end
 
-        it 'Entry Link Json To metadata' do 
+        it 'Entry Link Json To metadata' do
             doc = getJson(EntryReferenceLinkJson)
             metadata = ContentstackUtils::Model::Metadata.new(doc["children"][0])
             expect(metadata.item_type).to eq "entry"
@@ -82,7 +82,17 @@ RSpec.describe ContentstackUtils::Model::Metadata do
             expect(metadata.text).to eq "/copy-of-entry-final-02"
         end
 
-        it 'Entry Inline Json To metadata' do 
+        it 'Entry Link Json To metadata with multiple children' do
+            doc = getJson(EntryReferenceLinkTextJson)
+            metadata = ContentstackUtils::Model::Metadata.new(doc["children"][0])
+            expect(metadata.item_type).to eq "entry"
+            expect(metadata.style_type).to eq "link"
+            expect(metadata.item_uid).to eq "entry_uid_3"
+            expect(metadata.content_type_uid).to eq 'embeddedrte'
+            expect(metadata.text).to eq "L'Oreal Paris Telescopic Lift Washable Mascara"
+        end
+
+        it 'Entry Inline Json To metadata' do
             doc = getJson(EntryReferenceInlineJson)
             metadata = ContentstackUtils::Model::Metadata.new(doc["children"][0])
             expect(metadata.item_type).to eq "entry"

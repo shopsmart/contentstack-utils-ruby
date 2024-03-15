@@ -377,6 +377,14 @@ RSpec.describe ContentstackUtils do
             expect(result).to eq AssetReferenceHtml
         end
 
+        it 'Should return asset embedded items for assest-link' do 
+            doc = getJson(AssetReferenceJson)
+
+            result = ContentstackUtils.json_to_html(doc, ContentstackUtils::Model::Options.new(JSON_EMBEDDED_ITEMS_ENTRY))
+            
+            expect(result).to eq "<img src='/v3/dummy.pdf' alt='dummy.pdf' />"
+        end
+
         it 'Should return entry block embedded items' do 
             doc = getJson(EntryReferenceBlockJson)
 
@@ -512,6 +520,26 @@ RSpec.describe ContentstackUtils do
 
             expect(result).to eq UnorderListHtml
             expect(arrayResult).to eq [UnorderListHtml]
+        end
+
+        it 'Should return Order List string for OrderListJson with Fragment doc' do
+            entry = getGQLJSONRTE(OrderListFragmentJson)
+
+            result = ContentstackUtils::GQL.json_to_html(entry['single_rte'], ContentstackUtils::Model::Options.new())
+            arrayResult = ContentstackUtils::GQL.json_to_html(entry['multiple_rte'], ContentstackUtils::Model::Options.new())
+
+            expect(result).to eq OrderListFragmentHtml
+            expect(arrayResult).to eq [OrderListFragmentHtml]
+        end
+
+        it 'Should return Unorder List string for UnorderListJson with Fragment doc' do
+            entry = getGQLJSONRTE(UnorderListFragmentJson)
+
+            result = ContentstackUtils::GQL.json_to_html(entry['single_rte'], ContentstackUtils::Model::Options.new())
+            arrayResult = ContentstackUtils::GQL.json_to_html(entry['multiple_rte'], ContentstackUtils::Model::Options.new())
+
+            expect(result).to eq UnorderListFragmentHtml
+            expect(arrayResult).to eq [UnorderListFragmentHtml]
         end
 
         it 'Should return image string for ImgJson doc' do
